@@ -28,6 +28,7 @@ const EN = {
     socialStudio: 'Press & Social Studio',
     qrPlaque: 'Stone QR Plaques',
     switchLang: 'Language',
+    menu: 'Menu',
 
     home: 'Home',
     homeTitle: 'Broadsheet Archive & Chronicle',
@@ -1063,6 +1064,7 @@ const TR: TranslationDictionary = {
     socialStudio: 'Basın ve Sosyal Medya Stüdyosu',
     qrPlaque: 'Taş QR Plaketleri',
     switchLang: 'Dil',
+    menu: 'Menü',
 
     home: 'Ana Sayfa',
     homeTitle: 'Gazete Arşivi ve Kroniği',

@@ -24,3 +24,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/*
+ * Phone touch targets.
+ *
+ * This interface was drawn for a mouse: chips at 23px, filters at 30px, footer
+ * links at 17px. A fingertip is about 44px across, so below `md` every control
+ * gets that as a floor.
+ *
+ * A native `button` centres its own content, so raising the floor moves nothing
+ * around inside it. Inline links inside a sentence are deliberately left alone:
+ * `min-height` does nothing to an inline box, which is what you want in the
+ * middle of a paragraph and not what you want on a standalone control.
+ */
+@media (max-width: 767px) {
+  button,
+  [role='button'],
+  a[download],
+  summary {
+    min-height: 44px;
+  }
+
+  /* Icon-only controls need the width too, or they stay a 28px sliver. */
+  button:empty,
+  button > svg:only-child {
+    min-width: 44px;
+  }
+}

@@ -65,14 +65,14 @@ export const FooterManifesto: React.FC<FooterManifestoProps> = ({
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono uppercase tracking-wider">
             <button
               onClick={onOpenCreate}
-              className="hover:underline font-bold text-[#111111] cursor-pointer"
+              className="inline-block py-2 hover:underline font-bold text-[#111111] cursor-pointer"
             >
               {t.create}
             </button>
             <span className="text-[#111111]/30">&bull;</span>
             <button
               onClick={onOpenSearch}
-              className="hover:underline text-[#555555] cursor-pointer"
+              className="inline-block py-2 hover:underline text-[#555555] cursor-pointer"
             >
               {t.search}
             </button>
@@ -84,20 +84,20 @@ export const FooterManifesto: React.FC<FooterManifestoProps> = ({
 
         {/* Legal & consent links */}
         <div className="pt-4 flex flex-wrap items-center justify-center md:justify-start gap-4 text-[11px] font-mono uppercase tracking-wider">
-          <button onClick={onOpenPrivacy} className="hover:underline text-[#555555] cursor-pointer">
+          <button onClick={onOpenPrivacy} className="inline-block py-2 hover:underline text-[#555555] cursor-pointer">
             {t.privacy}
           </button>
           <span className="text-[#111111]/30">&bull;</span>
           <button
             onClick={onOpenCookiePolicy}
-            className="hover:underline text-[#555555] cursor-pointer"
+            className="inline-block py-2 hover:underline text-[#555555] cursor-pointer"
           >
             {t.cookiePolicy}
           </button>
           <span className="text-[#111111]/30">&bull;</span>
           <button
             onClick={onOpenCookiePreferences}
-            className="hover:underline text-[#555555] cursor-pointer"
+            className="inline-block py-2 hover:underline text-[#555555] cursor-pointer"
           >
             {t.cookiePreferences}
           </button>

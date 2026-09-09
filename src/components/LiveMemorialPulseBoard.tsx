@@ -521,7 +521,7 @@ export const LiveMemorialPulseBoard: React.FC<LiveMemorialPulseBoardProps> = ({
             
             <button
               onClick={() => setActiveFilter('all')}
-              className={`px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border shadow-2xs cursor-pointer ${
+              className={`min-h-11 inline-flex items-center px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border shadow-2xs cursor-pointer ${
                 activeFilter === 'all'
                   ? 'bg-[#F3BE38] text-[#1E1B18] border-[#F3BE38]'
                   : 'bg-[#1C1C1C] text-[#E5E5E5] border-white/20 hover:text-white hover:border-white/50'
@@ -532,7 +532,7 @@ export const LiveMemorialPulseBoard: React.FC<LiveMemorialPulseBoardProps> = ({
 
             <button
               onClick={() => setActiveFilter('candle')}
-              className={`px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
+              className={`min-h-11 px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
                 activeFilter === 'candle'
                   ? 'bg-[#FEF3C7] text-[#92400E] border-[#F59E0B]'
                   : 'bg-[#1C1C1C] text-[#E5E5E5] border-white/20 hover:border-[#F59E0B]'
@@ -544,7 +544,7 @@ export const LiveMemorialPulseBoard: React.FC<LiveMemorialPulseBoardProps> = ({
 
             <button
               onClick={() => setActiveFilter('letter')}
-              className={`px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
+              className={`min-h-11 px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
                 activeFilter === 'letter'
                   ? 'bg-[#FFE4E6] text-[#9F1239] border-[#E11D48]'
                   : 'bg-[#1C1C1C] text-[#E5E5E5] border-white/20 hover:border-[#E11D48]'
@@ -556,7 +556,7 @@ export const LiveMemorialPulseBoard: React.FC<LiveMemorialPulseBoardProps> = ({
 
             <button
               onClick={() => setActiveFilter('tree')}
-              className={`px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
+              className={`min-h-11 px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
                 activeFilter === 'tree'
                   ? 'bg-[#D1FAE5] text-[#065F46] border-[#059669]'
                   : 'bg-[#1C1C1C] text-[#E5E5E5] border-white/20 hover:border-[#059669]'
@@ -568,7 +568,7 @@ export const LiveMemorialPulseBoard: React.FC<LiveMemorialPulseBoardProps> = ({
 
             <button
               onClick={() => setActiveFilter('audio')}
-              className={`px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
+              className={`min-h-11 px-3 py-1.5 text-xs font-mono font-bold uppercase transition rounded-xs border flex items-center gap-1.5 shadow-2xs cursor-pointer ${
                 activeFilter === 'audio'
                   ? 'bg-[#E0F2FE] text-[#075985] border-[#0284C7]'
                   : 'bg-[#1C1C1C] text-[#E5E5E5] border-white/20 hover:border-[#0284C7]'

@@ -238,7 +238,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ language, onOpenPo
           <button
             type="button"
             onClick={() => setShowDetails((prev) => !prev)}
-            className="font-mono text-[11px] uppercase tracking-wider text-[#555555] underline underline-offset-2 hover:text-[#111111] cursor-pointer"
+            className="min-h-11 inline-flex items-center font-mono text-[11px] uppercase tracking-wider text-[#555555] underline underline-offset-2 hover:text-[#111111] cursor-pointer"
           >
             {showDetails ? t.back : t.manage}
           </button>
@@ -247,7 +247,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ language, onOpenPo
             <button
               type="button"
               onClick={() => decide({ analytics: false, marketing: false })}
-              className="border border-[#111111] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-[#111111] transition-colors hover:bg-[#111111] hover:text-white cursor-pointer"
+              className="min-h-11 inline-flex items-center justify-center border border-[#111111] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-[#111111] transition-colors hover:bg-[#111111] hover:text-white cursor-pointer"
             >
               {t.rejectAll}
             </button>
@@ -255,7 +255,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ language, onOpenPo
               <button
                 type="button"
                 onClick={() => decide({ analytics, marketing })}
-                className="border border-[#111111] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-[#111111] transition-colors hover:bg-[#111111] hover:text-white cursor-pointer"
+                className="min-h-11 inline-flex items-center justify-center border border-[#111111] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-[#111111] transition-colors hover:bg-[#111111] hover:text-white cursor-pointer"
               >
                 {t.save}
               </button>
@@ -263,7 +263,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({ language, onOpenPo
             <button
               type="button"
               onClick={() => decide({ analytics: true, marketing: true })}
-              className="bg-[#111111] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-white transition-opacity hover:opacity-85 cursor-pointer"
+              className="min-h-11 inline-flex items-center justify-center bg-[#111111] px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-white transition-opacity hover:opacity-85 cursor-pointer"
             >
               {t.acceptAll}
             </button>

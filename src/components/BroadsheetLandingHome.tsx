@@ -175,11 +175,11 @@ export const BroadsheetLandingHome: React.FC<BroadsheetLandingHomeProps> = ({
             <div className="flex items-center gap-2 shrink-0">
               <button
                 onClick={onOpenCreate}
-                className="px-3.5 py-1.5 bg-white hover:bg-[#EAEAEA] text-black text-[10px] font-mono uppercase tracking-wider font-bold transition shadow-2xs cursor-pointer"
+                className="min-h-11 inline-flex items-center justify-center px-3.5 py-1.5 bg-white hover:bg-[#EAEAEA] text-black text-[10px] font-mono uppercase tracking-wider font-bold transition shadow-2xs cursor-pointer"
               >{t.landing.createMemorial}</button>
               <button
                 onClick={onOpenSearch}
-                className="px-3.5 py-1.5 bg-transparent hover:bg-white/10 text-white border border-white/30 text-[10px] font-mono uppercase tracking-wider transition cursor-pointer"
+                className="min-h-11 inline-flex items-center justify-center px-3.5 py-1.5 bg-transparent hover:bg-white/10 text-white border border-white/30 text-[10px] font-mono uppercase tracking-wider transition cursor-pointer"
               >{t.landing.searchRegistry}</button>
             </div>
 
@@ -215,7 +215,7 @@ export const BroadsheetLandingHome: React.FC<BroadsheetLandingHomeProps> = ({
               </div>
               <button
                 type="submit"
-                className="px-4 py-1.5 bg-[#2B2724] hover:bg-[#423C37] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider whitespace-nowrap font-bold transition cursor-pointer"
+                className="min-h-11 inline-flex items-center justify-center px-4 py-1.5 bg-[#2B2724] hover:bg-[#423C37] text-[#FAF8F5] text-xs font-mono uppercase tracking-wider whitespace-nowrap font-bold transition cursor-pointer"
               >{t.landing.lookupSubmit}</button>
             </form>
 
@@ -364,7 +364,7 @@ export const BroadsheetLandingHome: React.FC<BroadsheetLandingHomeProps> = ({
 
                       <button
                         onClick={() => onSelectMemorial(featuredMemorial)}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#2B2724] text-[#FAF8F5] hover:bg-[#453E38] transition font-bold text-[11px] shadow-2xs group-hover:bg-[#855327] cursor-pointer"
+                        className="min-h-11 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#2B2724] text-[#FAF8F5] hover:bg-[#453E38] transition font-bold text-[11px] shadow-2xs group-hover:bg-[#855327] cursor-pointer"
                       >
                         <span>{t.landing.viewDossier}</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -396,7 +396,7 @@ export const BroadsheetLandingHome: React.FC<BroadsheetLandingHomeProps> = ({
                     <button
                       key={tab.id}
                       onClick={() => setActiveTab(tab.id as typeof activeTab)}
-                      className={`px-2.5 py-1 border transition uppercase text-[10px] font-bold cursor-pointer ${
+                      className={`min-h-11 inline-flex items-center px-3 border transition uppercase text-[10px] font-bold cursor-pointer ${
                         activeTab === tab.id 
                           ? 'bg-[#2B2724] text-[#FAF8F5] border-[#2B2724]' 
                           : 'bg-[#FAF8F5] hover:bg-[#F2ECE1] text-[#423C36] border-[#D4C8B5]'
