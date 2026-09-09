@@ -135,9 +135,9 @@ export const MemorialLiveEventModal: React.FC<MemorialLiveEventModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+    <div data-modal="overlay" className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       {/* Immersive Midnight Sanctuary Chamber */}
-      <div className="bg-[#0D1117] text-[#F0F6FC] border-2 border-[#30363D] w-full max-w-5xl max-h-[94vh] flex flex-col shadow-2xl rounded-sm overflow-hidden ring-1 ring-white/10">
+      <div data-modal="panel" className="bg-[#0D1117] text-[#F0F6FC] border-2 border-[#30363D] w-full max-w-5xl max-h-[94vh] flex flex-col shadow-2xl rounded-sm overflow-hidden ring-1 ring-white/10">
         
         {/* Sanctuary Masthead */}
         <div className="p-4 sm:p-5 border-b border-[#21262D] bg-[#161B22] flex items-center justify-between">

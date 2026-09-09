@@ -342,8 +342,8 @@ export const SocialMediaStudioModal: React.FC<SocialMediaStudioModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-y-auto animate-in fade-in duration-200">
-      <div className="bg-[#FAF8F5] text-[#1E1B18] border-2 border-[#1E1B18] max-w-6xl w-full p-5 sm:p-8 shadow-2xl my-6 max-h-[96vh] flex flex-col rounded-xs overflow-hidden">
+    <div data-modal="overlay" className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-y-auto animate-in fade-in duration-200">
+      <div data-modal="panel" className="bg-[#FAF8F5] text-[#1E1B18] border-2 border-[#1E1B18] max-w-6xl w-full p-5 sm:p-8 shadow-2xl my-6 max-h-[96vh] flex flex-col rounded-xs overflow-hidden">
         
         {/* Top Masthead Modal Header */}
         <div className="flex items-center justify-between pb-4 border-b border-[#D6CBB8] shrink-0">

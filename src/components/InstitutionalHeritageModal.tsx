@@ -43,7 +43,7 @@ export const InstitutionalHeritageModal: React.FC<InstitutionalHeritageModalProp
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+    <div data-modal="overlay" className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       
       {/* Dynamic Themed Modal: Terracotta/Ruby for Archive, Indigo/Cyan for API */}
       <div className={`w-full max-w-5xl max-h-[94vh] flex flex-col shadow-2xl rounded-sm overflow-hidden border-2 transition-colors duration-300 ${
@@ -58,7 +58,7 @@ export const InstitutionalHeritageModal: React.FC<InstitutionalHeritageModalProp
             ? 'bg-[#221313] border-[#3D1E1E]'
             : 'bg-[#101A26] border-[#1A2C40]'
         }`}>
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div data-modal="panel" className="flex items-center gap-3 sm:gap-4">
             <div className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 shadow-lg ${
               activeTab === 'archive'
                 ? 'bg-red-500/20 border border-red-500/40 text-red-300'

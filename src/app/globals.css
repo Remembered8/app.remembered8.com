@@ -51,3 +51,78 @@ body {
     min-width: 44px;
   }
 }
+
+@media (max-width: 767px) {
+  
+  /*
+   * Modals, on a phone.
+   *
+   * Every one of these was drawn as a card floating on a dimmed desktop: a 16px
+   * gutter, a 2px border, 24px of its own padding, and a heading at 24px. On a
+   * 390px screen that is 84px of chrome before a single word of content, which is
+   * why they read as clutter with the content squeezed out of the middle.
+   *
+   * A phone has no room for a card floating on anything. So the overlay stops
+   * being a gutter and the panel becomes the screen: full width, no border, its
+   * own scroll. The markers are set on the elements themselves rather than
+   * matched by class, so this cannot quietly stop applying when a panel is
+   * restyled.
+   */
+  [data-modal='overlay'] {
+    padding: 0 !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
+  }
+  
+  [data-modal='panel'] {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border-width: 0 !important;
+    border-radius: 0 !important;
+    max-height: 100dvh !important;
+    min-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  
+  /* Only the panels that carry their own padding: the rest pad their sections
+     individually and are already at phone sizes. */
+  [data-modal='panel'].p-5,
+  [data-modal='panel'].p-6 {
+    padding: 1rem !important;
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
+  }
+  
+  /* A modal title at 24px on a 390px screen wraps to three lines before the
+     content starts. */
+  [data-modal='panel'] h2,
+  [data-modal='panel'] h3 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 767px) {
+  /* The row at the top of a modal is an icon box, a badge, a title, a subtitle
+     and a close button on one line, laid out for a wide dialog. Letting it wrap
+     only drops the close button into the middle of the page, so instead the
+     text block is made shrinkable and the close button is not: the title wraps
+     inside its own share of the row and the way out stays in the corner where a
+     reader looks for it. */
+  [data-modal='panel'] > div:first-of-type > * {
+    min-width: 0;
+  }
+
+  [data-modal='panel'] > div:first-of-type > button {
+    flex-shrink: 0;
+  }
+
+  /* Centred text needs somewhere to centre. In a 358px column balancing the
+     lines is what keeps the ragged edge from looking accidental. */
+  [data-modal='panel'] p,
+  [data-modal='panel'] h2,
+  [data-modal='panel'] h3 {
+    text-wrap: balance;
+  }
+}

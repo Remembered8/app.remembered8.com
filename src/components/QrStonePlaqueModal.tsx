@@ -73,17 +73,19 @@ export const QrStonePlaqueModal: React.FC<QrStonePlaqueModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-[#FAF8F5] text-[#1E1B18] border-2 border-[#2B2724] max-w-2xl w-full p-6 sm:p-8 shadow-2xl my-8 relative">
+    <div data-modal="overlay" className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+      <div data-modal="panel" className="bg-[#FAF8F5] text-[#1E1B18] border-2 border-[#2B2724] max-w-2xl w-full p-6 sm:p-8 shadow-2xl my-8 relative">
         
         {/* Header */}
-        <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#D6CBB8]">
-          <div className="flex items-center gap-3">
+        <div className="flex items-start justify-between gap-2 mb-4 pb-3 border-b border-[#D6CBB8]">
+          <div className="flex items-start gap-3 min-w-0">
             <div className="p-2.5 border border-[#C5A059]/60 bg-[#F5EFE0] shadow-2xs">
               <QrCode className="w-5 h-5 text-[#8F6B2C]" />
             </div>
-            <div>
-              <div className="flex items-center gap-2">
+            <div className="min-w-0">
+              {/* The spec badge is chrome. On a phone it wraps to two lines and
+                  costs more room than the title it decorates. */}
+              <div className="hidden sm:flex items-center gap-2">
                 <span className="text-[9px] font-mono uppercase tracking-widest text-[#855F24] bg-[#F5ECDA] border border-[#DFC491] px-2 py-0.5 font-bold flex items-center gap-1">
                   <Sparkles className="w-2.5 h-2.5 text-[#C5A059]" />{t.modals.qr.specLabel}</span>
               </div>

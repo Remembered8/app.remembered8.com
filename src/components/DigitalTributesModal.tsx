@@ -120,9 +120,9 @@ export const DigitalTributesModal: React.FC<DigitalTributesModalProps> = ({
   const activeTributeObj = tributes.find(t => t.id === selectedTribute) || tributes[1];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+    <div data-modal="overlay" className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       {/* Emerald Garden Ecosystem Modal */}
-      <div className="bg-[#0B1A13] text-[#ECFDF5] border-2 border-[#1E4D38] w-full max-w-4xl max-h-[94vh] flex flex-col shadow-2xl rounded-sm overflow-hidden ring-1 ring-emerald-500/20">
+      <div data-modal="panel" className="bg-[#0B1A13] text-[#ECFDF5] border-2 border-[#1E4D38] w-full max-w-4xl max-h-[94vh] flex flex-col shadow-2xl rounded-sm overflow-hidden ring-1 ring-emerald-500/20">
         
         {/* Modal Header */}
         <div className="p-4 sm:p-5 border-b border-[#1A3D2D] bg-[#0E231A] flex items-center justify-between">

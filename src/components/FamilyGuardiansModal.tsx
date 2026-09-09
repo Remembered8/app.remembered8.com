@@ -82,8 +82,8 @@ export const FamilyGuardiansModal: React.FC<FamilyGuardiansModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-white text-[#111111] border-2 border-[#111111] max-w-3xl w-full p-6 sm:p-8 shadow-2xl my-8">
+    <div data-modal="overlay" className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
+      <div data-modal="panel" className="bg-white text-[#111111] border-2 border-[#111111] max-w-3xl w-full p-6 sm:p-8 shadow-2xl my-8">
         
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b-2 border-[#111111]">

@@ -274,8 +274,8 @@ export const LegalNoticeModal: React.FC<LegalNoticeModalProps> = ({
   const sections = tab === 'privacy' ? t.privacy : t.cookies;
 
   return (
-    <div className="fixed inset-0 z-[110] flex items-start justify-center overflow-y-auto bg-black/60 p-3 sm:p-6">
-      <div className="w-full max-w-3xl border border-[#111111] bg-[#FAF8F5]">
+    <div data-modal="overlay" className="fixed inset-0 z-[110] flex items-start justify-center overflow-y-auto bg-black/60 p-3 sm:p-6">
+      <div data-modal="panel" className="w-full max-w-3xl border border-[#111111] bg-[#FAF8F5]">
         <div className="sticky top-0 flex items-center justify-between gap-4 border-b border-[#111111] bg-[#FAF8F5] px-4 py-3">
           <h2 className="font-serif-display text-lg font-black tracking-tight text-[#111111]">
             {t.title}

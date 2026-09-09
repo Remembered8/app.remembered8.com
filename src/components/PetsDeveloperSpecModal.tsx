@@ -301,8 +301,8 @@ Collection: 'pet_memorials'
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-[#FAF8F5] border-2 border-[#1E1B18] w-full max-w-4xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden font-serif">
+    <div data-modal="overlay" className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+      <div data-modal="panel" className="bg-[#FAF8F5] border-2 border-[#1E1B18] w-full max-w-4xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden font-serif">
         
         {/* Modal Top Masthead */}
         <div className="bg-[#0E1A13] text-[#FAF8F5] p-4 sm:p-5 border-b-2 border-[#1E1B18] flex items-center justify-between">
