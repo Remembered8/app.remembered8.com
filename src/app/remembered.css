@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+    background-color: #F8F8F5;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, .serif, .font-serif-display {
+    font-family: 'Playfair Display', 'Bodoni Moda', 'Newsreader', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+
+  .sans {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Classic Broadsheet Lines & Hairlines */
+.border-nyt-double {
+  border-top: 3px double #111111;
+}
+
+.border-nyt-double-bottom {
+  border-bottom: 3px double #111111;
+}
+
+/* Authentic New York Times Oxford Rule (Thick line followed by thin hairline) */
+.nyt-oxford-rule {
+  border-top: 2.5px solid #1A1714;
+  position: relative;
+  padding-top: 2px;
+}
+.nyt-oxford-rule::before {
+  content: '';
+  display: block;
+  border-top: 1px solid #1A1714;
+  margin-bottom: 4px;
+}
+
+/* Museum Passe-Partout Archival Framing (Golden Ratio & Silver-Gelatin Mounts) */
+.passe-partout-frame {
+  padding: 6px;
+  background-color: #FAF8F5;
+  border: 1px solid #DCD3C1;
+  box-shadow: 0 1px 3px rgba(30, 27, 24, 0.04), 0 4px 12px -2px rgba(30, 27, 24, 0.05);
+}
+
+.passe-partout-dark {
+  padding: 6px;
+  background-color: #121F17;
+  border: 1px solid #2B4E36;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Neuromarketing & Neuro-Reading Optimal Measure & Leading */
+.neuro-lead {
+  line-height: 1.618;
+  max-width: 65ch;
+}
+
+/* Clean Hygienic Archival Shadow */
+.shadow-hygienic {
+  box-shadow: 0 1px 3px rgba(30, 27, 24, 0.04), 0 6px 16px -4px rgba(30, 27, 24, 0.06);
+}
+
+.border-hairline {
+  border-color: #E2E2DC;
+}
+
+.border-hairline-dark {
+  border-color: #262626;
+}
+
+/* Classic Broadsheet Drop Cap */
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', Georgia, serif;
+  float: left;
+  font-size: 3.75rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 12px;
+  padding-bottom: 0px;
+  color: #111111;
+  font-weight: 700;
+}
+
+/* Silver-Gelatin / Monochrome Photo Filter */
+.archival-bw {
+  filter: grayscale(100%) contrast(108%) brightness(98%);
+  transition: filter 0.5s ease, transform 0.7s ease;
+}
+
+.archival-bw:hover {
+  filter: grayscale(40%) contrast(105%) brightness(100%);
+}
+
+.archival-bw-pure {
+  filter: grayscale(100%) contrast(115%);
+}
+
+/* Newsprint Newspaper Paper Background */
+.bg-newsprint {
+  background-color: #F8F8F5;
+}
+
+.bg-newsprint-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5DF;
+}
+
+/* Monochrome Subtle Glow & Focus */
+.editorial-box {
+  background-color: #FFFFFF;
+  border: 1px solid #111111;
+}
+
+/* Micro-Neon Precision Accents (Subtle & High-Contrast) */
+.neon-pulse-green {
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.65), 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+.neon-pulse-amber {
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.7), 0 0 28px rgba(245, 158, 11, 0.3);
+}
+
+.neon-pulse-cyan {
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.65), 0 0 24px rgba(6, 182, 212, 0.25);
+}
+
+.glow-amber-text {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+
+/* Hide scrollbar for clean horizontal chip navigation */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes subtle-flame {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.98;
+  }
+  50% {
+    transform: scale(1.08, 0.94) translateY(-1.5px);
+    opacity: 0.88;
+  }
+}
+
+.animate-subtle-flame {
+  animation: subtle-flame 2.2s ease-in-out infinite;
+}
+
